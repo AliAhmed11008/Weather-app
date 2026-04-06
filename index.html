@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f0ff;
+            margin: 0;
+            padding: 30px;
+        }
+ 
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+ 
+        .search-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+ 
+        .search-box input {
+            padding: 8px;
+            font-size: 15px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+ 
+        .search-box button {
+            padding: 8px 15px;
+            font-size: 15px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+ 
+        #loading {
+            text-align: center;
+            color: gray;
+            display: none;
+        }
+ 
+        #error {
+            text-align: center;
+            color: red;
+            display: none;
+        }
+ 
+        #weather-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 280px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+            display: none;
+        }
+ 
+        #weather-card h2 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+ 
+        #weather-card img {
+            width: 70px;
+        }
+ 
+        #weather-card .temp {
+            font-size: 45px;
+            font-weight: bold;
+            color: #2196F3;
+            margin: 5px 0;
+        }
+ 
+        #weather-card p {
+            color: #555;
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+ 
+<body>
+ 
+    <h1>🌤 Weather App</h1>
+ 
+    <div class="search-box">
+        <input type="text" id="city" placeholder="Enter city name...">
+        <button onclick="getWeather()">Search</button>
+    </div>
+ 
+    <p id="loading">Loading... please wait</p>
+    <p id="error">City not found. Please try again.</p>
+ 
+    <div id="weather-card">
+        <h2 id="city-name"></h2>
+        <img id="weather-icon" src="" alt="icon">
+        <p class="temp" id="temp"></p>
+        <p id="condition"></p>
+        <p>💧 Humidity: <span id="humidity"></span>%</p>
+        <p>💨 Wind Speed: <span id="wind"></span> km/h</p>
+    </div>
+ 
+
+    <script src="app.js"></script>
+</body>
+
+</html>
